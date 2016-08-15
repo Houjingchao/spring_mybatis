@@ -49,11 +49,15 @@
   </build>
 
   <dependencies>
+
+
     <!--dependency>
       <groupId>com.jaf.sm</groupId>
       <artifactId>[the artifact id of the block to be mounted]</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency-->
+
+
   </dependencies>
 
 </project>
