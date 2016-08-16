@@ -8,16 +8,15 @@
   <!-- 配置数据源 -->
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
     <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-    <property name="url" value="jdbc:mysql://localhost:3306/db_mybatis?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"></property>
+    <property name="url" value="jdbc:mysql://localhost:3306/mybatis"></property>
     <property name="username" value="root"></property>
-    <property name="password" value="root"></property>
+    <property name="password" value="jaf"></property>
   </bean>
 
   <bean id="transactionManager"
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource" />
   </bean>
-
 
   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
     <property name="configLocation" value="classpath:MyBatis-Configuration.xml"></property>
@@ -30,7 +29,7 @@
     <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
   </bean>
 
-  <bean id="userService" class="com.icreate.service.impl.UserServiceImpl">
+  <bean id="userService" class="com.jaf.service.impl.UserServiceImpl">
     <property name="userDao" ref="userDao"></property>
   </bean>
 
