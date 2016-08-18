@@ -8,6 +8,7 @@
     <param-name>contextConfigLocation</param-name>
     <!-- applicationContext.xml文件在/WEB-INF/目錄下時可以這樣配置,-->
     <param-value>/WEB-INF/applicationContext.xml</param-value>
+
   </context-param>
 
   <!-- 配置上下文监听 -->

@@ -20,10 +20,10 @@
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="configLocation" value="com/jaf/config/MyBatis-Configuration.xml"></property>
+        <!-- 对于classpath 还有疑问 -->
+        <property name="configLocation" value="classpath:/com/jaf/config/MyBatis-Configuration.xml"></property>
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
 
     <bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="mapperInterface" value="com.jaf.dao.UserDao"></property>
