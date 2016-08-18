@@ -19,9 +19,8 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="configLocation" value="classpath:MyBatis-Configuration.xml"></property>
+        <property name="configLocation" value="com/jaf/config/MyBatis-Configuration.xml"></property>
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
