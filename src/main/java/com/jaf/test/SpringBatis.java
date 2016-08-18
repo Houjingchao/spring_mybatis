@@ -17,7 +17,7 @@ public class SpringBatis {
     UserService userService = null;
 
     /**
-     * @before 需要引入juit 包
+     * @before 需要引入junit 包
      */
     @Before
     public void initContext() {
@@ -53,22 +53,22 @@ public class SpringBatis {
     @Test
     public void update() {
         User user = new User();
-        user.setUsername("苏若年");
-        user.setPassword("xxxxxxxx");
-        user.setEmail("xxxxxx@163xxx");
+        user.setUsername("jaf");
+        user.setPassword("1234567");
+        user.setEmail("1234567@qq.com");
         user.setSex("男");
-        user.setAge(23);
+        user.setAge(33);
         userService.update(user);
     }
 
     @Test
     public void delete() {
-        userService.delete("苏若年");
+        userService.delete("jaf");
     }
 
     @Test
     public void findByName() {
-        User user = userService.findByUserName("苏若年");
+        User user = userService.findByUserName("jaf");
         System.out.println("用户名:" + user.getUsername() + "\t密码:" + user.getPassword() + "\t邮箱：" + user.getEmail());
 
     }
